@@ -22,4 +22,12 @@ public class ClientController {
     public List<Client> getAllCLient(){
         return clientService.findAllClient();
     }
+    @GetMapping("/{id}")
+    public  Client getById(@PathVariable Long id){
+        return clientService.findCLientById(id);
+    }
+    @DeleteMapping ("/{id}")
+    public void deleteById(@PathVariable Long id){
+        clientService.deleteClientById(id);
+    }
 }

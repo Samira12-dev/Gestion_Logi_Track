@@ -15,7 +15,6 @@ public class Client {
     private  String telephone;
     private String ville;
     @OneToMany(mappedBy = "client")
-    @JsonIgnore
     private List<Order> orderList;
 
 

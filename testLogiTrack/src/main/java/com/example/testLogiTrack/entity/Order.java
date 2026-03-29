@@ -15,7 +15,7 @@ public class Order {
     @ManyToOne
     @JoinColumn(name = "client_id")
     private Client client;
-    @OneToMany(mappedBy = "order")
+    @OneToMany(mappedBy = "orders")
     private List<OrderLine> orderLineList;
 
    public Order(){}
