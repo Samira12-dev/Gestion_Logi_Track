@@ -10,7 +10,7 @@ public class OrderLine {
     private int quantity;
     @ManyToOne
     @JoinColumn(name = "order_id")
-    private Order order;
+    private Order orders;
     @ManyToOne
     @JoinColumn(name = "product_id")
     private  Product product;
