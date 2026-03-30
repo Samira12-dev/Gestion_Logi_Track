@@ -65,7 +65,7 @@ public Order updateOrder(Long id , String status){
     return orderRepo.save(order);
 }
 public  List<Order> getAllOrdersOfClient(Long clientId){
-    return orderRepo.findOrderByClient(clientId);
+    return orderRepo.findByClientId(clientId);
 }
 public Long TotalOrders(){
     return  orderRepo.countAllOrders();

@@ -20,12 +20,12 @@ public class OrderLine {
     public OrderLine(Long id, int quantity, Order order, Product product) {
         this.id = id;
         this.quantity = quantity;
-        this.order = order;
+        this.orders = order;
         this.product = product;
     }
     public OrderLine( int quantity, Order order, Product product) {
         this.quantity = quantity;
-        this.order = order;
+        this.orders = order;
         this.product = product;
     }
 
@@ -46,11 +46,11 @@ public class OrderLine {
     }
 
     public Order getOrder() {
-        return order;
+        return orders;
     }
 
     public void setOrder(Order order) {
-        this.order = order;
+        this.orders = order;
     }
 
     public Product getProduct() {

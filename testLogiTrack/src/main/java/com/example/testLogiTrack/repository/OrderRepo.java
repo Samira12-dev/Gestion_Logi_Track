@@ -9,8 +9,7 @@ import java.util.List;
 
 public interface OrderRepo extends JpaRepository<Order,Long> {
 
-    List<Order> findOrderByClient( Long ClientId);
-
+    List<Order> findByClientId(Long clientId);
     @Query("select count (o)from Order o")
     long countAllOrders();
 
