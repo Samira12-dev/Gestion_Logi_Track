@@ -23,9 +23,9 @@ public class OrderController {
         this.productService = productService;
         this.clientService = clientService;
     }
-    @PostMapping
-    public Order createOrderForClient(@PathVariable Long clientID){
-        return orderService.createOrderForClient(clientID);
+    @PostMapping("/client/{clientId}")
+    public Order createOrderForClient(@PathVariable Long clientId){
+        return orderService.createOrderForClient(clientId);
     }
     @GetMapping
     public List<Order> getAllOrders(){
@@ -41,7 +41,7 @@ public class OrderController {
         return orderService.findOrderById(id);
 }
 
-@PutMapping
+    @PutMapping("/{id}/status")
     public Order updateStatusOrder(@PathVariable Long id , @RequestBody String status){
         return  orderService.updateOrder(id,status);
 }
